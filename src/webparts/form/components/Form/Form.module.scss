@@ -1,0 +1,84 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.form {
+  overflow: hidden;
+  padding: 1em;
+  color: '[theme:bodyText, default: #323130]';
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+  @include ms-borderColor-sharedCyan40;
+  @include ms-bgColor-gray30;
+  @include ms-Grid-col;
+  @include ms-lg10;
+  @include ms-xl8;
+  @include ms-xlPush2;
+  @include ms-lgPush1;
+}
+
+// .welcome {
+//   text-align: center;
+// }
+
+// .welcomeImage {
+//   width: 100%;
+//   max-width: 420px;
+// }
+
+.links {
+  a {
+    text-decoration: none;
+    color: '[theme:link, default:#03787c]';
+    color: var(
+      --link
+    ); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: '[theme:linkHovered, default: #014446]';
+      color: var(
+        --linkHovered
+      ); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+
+.title {
+  @include ms-fontSize-24;
+  @include ms-fontColor-themeDark;
+  @include ms-motion-fadeIn;
+  @include ms-borderBox;
+}
+
+.subTitle {
+  @include ms-fontColor-themeDark;
+}
+
+.container {
+  @include ms-Grid;
+  background-color: $ms-color-themeLight;
+
+  .label {
+    @include ms-fontColor-themeDark;
+    @include ms-fontColor-gray130;
+    @include ms-Grid-row;
+    margin: 1rem;
+  }
+
+  .input {
+    margin: 1em;
+    max-width: 170px;
+  }
+
+  .button {
+    // @include ms-bgColor-communicationTint20;
+    @include ms-Grid-row;
+    @include ms-bgColor-sharedBlue10;
+    @include ms-fontColor-themeLight;
+    min-width: 50px;
+    margin: 1em;
+    padding: 0.5em;
+    // background-color: $ms-color-themeLight;
+  }
+}
